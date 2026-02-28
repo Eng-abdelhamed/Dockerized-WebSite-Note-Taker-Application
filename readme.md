@@ -7,7 +7,7 @@ A full-stack Dockerized Notes application built using Node.js, Express, PostgreS
 ---
 
 ## Project Structure
-
+```yaml
 .
 ├── FrontEnd/
 │   ├── index.html
@@ -21,7 +21,7 @@ A full-stack Dockerized Notes application built using Node.js, Express, PostgreS
 │
 ├── docker-compose.yml
 └── README.md
-
+```
 ---
 
 ## Features
@@ -52,13 +52,13 @@ A full-stack Dockerized Notes application built using Node.js, Express, PostgreS
 
 ### Build and Start
 
-docker compose up --build
+`` docker compose up --build ``
 
 ### Access the Application
 
 Open in browser:
 
-http://localhost
+`` http://localhost ``
 
 ---
 
@@ -87,20 +87,20 @@ Database:
 ## API Endpoints
 
 Health Check  
-GET /api/health
+``GET /api/health``
 
 Get All Notes  
-GET /api/items
+``GET /api/items``
 
 Create Note  
-POST /api/items  
+POST ``/api/items``  
 Body:
 {
   "name": "Example Note"
 }
 
 Delete Note  
-DELETE /api/items/:id
+``DELETE /api/items/:id``
 
 ---
 
@@ -108,13 +108,13 @@ DELETE /api/items/:id
 
 Backend uses:
 
-DATABASE_URL=postgresql://app:secret@db:5432/myapp  
-PORT=3001
+``DATABASE_URL=postgresql://app:secret@db:5432/myapp``  
+``PORT=3001``
 
 ---
 
 ## Database Access (Inside Container)
-
+```yaml
 docker exec -it notes-db psql -U app -d myapp
 
 Useful commands:
@@ -135,7 +135,7 @@ Stop containers and remove volumes (this deletes database data):
 docker compose down -v
 
 ---
-
+```
 ## Architecture Notes
 
 - Frontend communicates with backend through relative path `/api`
