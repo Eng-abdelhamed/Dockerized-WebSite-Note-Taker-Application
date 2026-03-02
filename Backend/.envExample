@@ -1,0 +1,5 @@
+DATABASE_URL=postgresql://app:secret@db:5432/myapp
+PORT=3001
+POSTGRES_USER=app
+POSTGRES_PASSWORD=secret
+POSTGRES_DB=myapp
